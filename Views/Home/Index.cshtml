@@ -1,0 +1,88 @@
+﻿@model ElectronNetWithMVC.Models.PayloadModel
+@{
+    ViewData["Title"] = "Home Page";
+   
+}
+
+<div class="box-container">
+	<div class="box-title">
+	<h3> @Model.Title <span> @Model.SubTitle </span></h3> 
+	<span id="divclose" class="close-icon"> X </span>
+	</div>
+    <div class="clear"></div>
+	<div class="box-content">
+		<div class="box-img-container">
+			<img src="/img/Indian_Female_Welcome01.png" alt="" />
+		</div>
+		<div class="box-description">
+            <div>
+                @Model.Body
+            </div>
+           
+            <div class="btn-container">
+            @if (@Model.Actions != null)
+            {                 
+                @foreach (var item in @Model.Actions)
+                {
+                    
+                    <span class="box-btn" id="btnTrayPos"  >@item</span>
+                }
+            }
+                
+            </div>
+             
+		</div>
+		<div class="clear"></div>
+		<div>
+		</div>
+	</div>
+	
+</div>
+ @* <div class="" style="position: absolute;">
+        <div class="card" style="width: 400px;height: 234px; border: 0;">
+            
+            <div class="card-body">
+                <img src="/img/Indian_Female_Welcome01.png" class="float-left" style="width: 150px;">
+                <div id="divclose" style="float: right;padding:3px;background-color: red;line-height: 10px;cursor: pointer; border: 0px; font-weight: bold;">X</div>
+                <h5 class="card-title">@Model.Title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">@Model.SubTitle</h6>
+                <p class="card-text">
+                    @Model.Body
+                </p>
+                @if (@Model.Actions != null)
+                {                 
+                    @foreach (var item in @Model.Actions)
+                    {
+                        <button id="btnTrayPos"  >@item</button>
+                    }
+                }
+             
+            </div>
+        </div>
+    </div> *@
+@section Scripts {    
+<script type="text/javascript">
+const { ipcRenderer,app } = require("electron");
+$( ".box-btn" ).on( "click", function() {
+   ipcRenderer.send("async-msg",$(this).text());     
+});
+
+$( "#divclose" ).on( "click", function() {
+   ipcRenderer.send("hideToSystemTray",$(this).text());     
+});
+
+$(document).ready(function() {   
+    if('@ViewContext.RouteData.Values["Action"].ToString().ToLower()'!=='index')
+        ipcRenderer.send("showWindow");
+});
+
+window.onbeforeunload = (e) => {  
+   //console.log('Home Index page');
+   //e.returnValue = true;
+   //debugger;
+   //ipcRenderer.send("hideToSystemTray");
+}; 
+
+</script>
+}
+
