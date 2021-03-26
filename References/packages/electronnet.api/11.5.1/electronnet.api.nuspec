@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>ElectronNET.API</id>
+    <version>11.5.1</version>
+    <authors>Gregor Biswanger, Robert Muehsig</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>PackageIcon.png</icon>
+    <projectUrl>https://github.com/ElectronNET/Electron.NET/</projectUrl>
+    <description>Building cross platform electron based desktop apps with .NET Core and ASP.NET Core.
+This package contains the API to access the "native" electron API.</description>
+    <releaseNotes>Changelog: https://github.com/ElectronNET/Electron.NET/blob/master/Changelog.md</releaseNotes>
+    <tags>electron aspnetcore</tags>
+    <repository type="git" url="https://github.com/ElectronNET/Electron.NET/" commit="427b57a00263352f195d0b218285647e708c7713" />
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="SocketIoClientDotNet" version="1.0.5" exclude="Build,Analyzers" />
+        <dependency id="System.Drawing.Common" version="5.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+</package>

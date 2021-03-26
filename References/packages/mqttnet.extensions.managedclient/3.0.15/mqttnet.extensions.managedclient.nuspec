@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MQTTnet.Extensions.ManagedClient</id>
+    <version>3.0.15</version>
+    <authors>The contributors of MQTTnet</authors>
+    <owners>Christian Kratky</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>images\Logo_128x128.png</icon>
+    <projectUrl>https://github.com/chkr1011/MQTTnet</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/chkr1011/MQTTnet/master/Images/Logo_128x128.png</iconUrl>
+    <description>This is an extension library which provides a managed MQTT client with additional features using MQTTnet.</description>
+    <releaseNotes>For release notes please go to MQTTnet release notes (https://www.nuget.org/packages/MQTTnet/).</releaseNotes>
+    <copyright>Copyright Christian Kratky 2016-2020</copyright>
+    <tags>MQTT Message Queue Telemetry Transport MQTTClient MQTTServer Server MQTTBroker Broker NETStandard IoT InternetOfThings Messaging Hardware Arduino Sensor Actuator M2M ESP Smart Home Cities Automation Xamarin Blazor</tags>
+    <dependencies>
+      <dependency id="MQTTnet" version="3.0.15" />
+    </dependencies>
+  </metadata>
+</package>

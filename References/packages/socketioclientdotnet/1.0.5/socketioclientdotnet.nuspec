@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>SocketIoClientDotNet</id>
+    <version>1.0.5</version>
+    <title>SocketIoClientDotNet</title>
+    <authors>Matthias Ludwig</authors>
+    <owners>Matthias Ludwig</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/Quobject/SocketIoClientDotNet/</projectUrl>
+    <description>This is the Socket.IO Client Library for .NET.</description>
+    <summary>This library supports all of the features the JS client does, including events, options and upgrading transport. SocketIoClientDotNet has a similar api to those of the JavaScript client.</summary>
+    <tags>socket.io.client</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework3.5">
+        <dependency id="WebSocket4Net" version="0.15.1" />
+        <dependency id="SuperSocket.ClientEngine.Core" version="0.9.0" />
+        <dependency id="Newtonsoft.Json" version="9.0.1" />
+        <dependency id="System.Threading.Tasks.Unofficial" version="3.1.0" />
+        <dependency id="EngineIoClientDotNet" version="1.0.5" />
+      </group>
+      <group targetFramework=".NETFramework4.0">
+        <dependency id="WebSocket4Net" version="0.15.1" />
+        <dependency id="SuperSocket.ClientEngine.Core" version="0.9.0" />
+        <dependency id="Newtonsoft.Json" version="9.0.1" />
+        <dependency id="EngineIoClientDotNet" version="1.0.5" />
+      </group>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="WebSocket4Net" version="0.15.1" />
+        <dependency id="SuperSocket.ClientEngine.Core" version="0.9.0" />
+        <dependency id="Newtonsoft.Json" version="9.0.1" />
+        <dependency id="EngineIoClientDotNet" version="1.0.5" />
+        <dependency id="System.Collections.Immutable" version="1.4.0" />
+      </group>
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="WebSocket4Net" version="0.15.1" />
+        <dependency id="SuperSocket.ClientEngine.Core" version="0.9.0" />
+        <dependency id="Newtonsoft.Json" version="9.0.1" />
+        <dependency id="EngineIoClientDotNet" version="1.0.5" />
+        <dependency id="System.Collections.Immutable" version="1.4.0" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
